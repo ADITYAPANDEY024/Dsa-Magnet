@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-
+const user = require('./user/user.routes')
 
 
 // use all the routes used below here
 
-
+router.use('/user', user)
 
 
 
@@ -18,5 +18,5 @@ router.use('*', (req, res) => {
     res.status(404).json({ error: 'Invalid route', availableRoutes })
 })
 module.exports = { router };
-// ************************************XXXXXXXXXXXXXXXXXXXXXXXX*********************************************
+// ************************************XXXXXXXXXXXXXXXXXXXXXXXX************************************
 
